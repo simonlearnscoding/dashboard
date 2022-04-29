@@ -1,0 +1,74 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+.grid {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template: 1fr 3fr / 1fr 3fr;
+    border: 1px black;
+    grid-template-areas:
+"navbar header"
+"navbar dashboard" ;
+
+}
+.header {
+    border: 1px black;
+    display: flex;
+
+    flex-flow: column;
+    grid-area: header;
+}
+
+
+.header-section {
+    background-color: darkgray;
+    flex-grow: 1;
+    display: flex;
+}
+
+.header-section > .search-icon {
+    flex-grow: 1;
+    background-color: whitesmoke;
+}
+.header-section > .searchbar {
+    flex-grow: 4;
+    background-color: lightblue;
+}
+.empty-space {
+
+}
+.avatar-name {
+    align-self: center;
+    justify-self: center;
+    margin-left: auto;
+    margin-top: 30px;
+    font-size: 1.5rem;
+}
+
+.avatar {
+    background-color: yellow;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+}
+.header-section > div
+{ flex-grow: 1;
+    margin: 5px;
+}
+
+
+.userinfo {
+    background-color: red;
+    flex-grow: 1;
+}
+.navbar {
+    grid-area: navbar;
+    background-color: cadetblue;
+}
+
+.dashboard {
+    grid-area: dashboard;
+    background-color: lightblue;
+}
